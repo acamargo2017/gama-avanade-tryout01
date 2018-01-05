@@ -1,18 +1,109 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Avanade Angular Academy by Gama - Simulado #1</title>
-	<meta charset="utf-8">
+<html lang="pt-br">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-</head>
-<body>
-<main role="main" id="main"></main>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-</body>
+    <title>Avanade Angular Academy by Gama - Simulado #1</title>
+    
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" href="./bootstrap/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="validacao.js"></script>   
+
+ </head>
+  <body>
+    <header>
+           <main role="main" id="main">
+              <div class="container text-center">
+            
+               <h1>Dê propósito para seu código</h1>
+               <p>Cansado de desenvolver projetos sem sentido? Participe do Avanade Angular Academy</p>
+              
+               <button type="button" class="btn btn-success" id="btn-apply-form" data-toggle="modal" data-target="#apply-modal">Inscreva-se</button>
+              
+               </div>
+
+               
+
+               <!-- Modal -->
+              <div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                 <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">Formulário de inscrição</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div action ="validacao.js" class="modal-body">
+                   <form method="POST">
+                     <div class="form-group">
+                       <label for="name" class="form-control-label">Nome:</label>
+                       <input type="name" class="form-control" id="name" placeholder="Digite seu nome" required>
+                       <span id="feedback-name"></span>
+                            
+                         
+                     </div>
+                     <div class="form-group">
+                       <label for="email" class="form-control-label">E-mail:</label>
+                       <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                       <span id="feedback-email"></span>
+                         
+                     </div>
+                   </form>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <button type="button" class="btn btn-primary" id="btn-apply">Enviar</button>
+                 </div>
+                </div>
+               </div>
+              </div>
+       
+           </main>
+           <section id="programacao">
+               <div class="container">
+                   <div class="row text-center">
+                       <div class="col-md-3">
+                         <h4>Inscrições</h4>
+                         <p>02/dez a 04/jan</p>
+                         <p>Para se increver basta preencher o formulário e se preparar para o nosso teste técnico com cursos online e simulados.</p>   
+                       </div>
+                           
+                       <div class="col-md-3">
+                         <h4>Teste técnico</h4>
+                         <p>05 a 06/jan</p>
+                         <p>Em seguida, prove que você está preparado fazendo os testes técnicos totalmente mão na massa.</p>
+                           
+                       </div>
+                           
+                       <div class="col-md-3">
+                         <h4>Seleção e Contratação</h4>
+                         <p>07/jan a 14/jan</p>
+                         <p>Os melhores candidatos serão entrevistados e contratados pela Avanade</p>
+                           
+                       </div>
+                           
+                       <div class="col-md-3">
+                         <h4>Treinamento</h4>
+                         <p>15/jan a 26/jan</p>
+                         <p>Serão duas semanas de treinamento super hands-on com os melhores devs do mercado.</p>
+                           
+                       </div>
+                            
+                       
+                   </div>
+                        
+                   
+               </div>
+                    
+               
+           </section>
+
+  </body>
 </html>
